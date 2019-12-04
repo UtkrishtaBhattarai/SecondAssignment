@@ -6,11 +6,13 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.secondassignment.R;
@@ -22,6 +24,7 @@ public class SumFragment extends Fragment implements View.OnClickListener {
 
      EditText etfirst,etsecond;
      Button btnadd;
+     TextView tvadd;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -30,6 +33,7 @@ public class SumFragment extends Fragment implements View.OnClickListener {
         etfirst=view.findViewById(R.id.etfirst);
         etsecond=view.findViewById(R.id.etsecond);
         btnadd=view.findViewById(R.id.btnaddnums);
+        tvadd=view.findViewById(R.id.tvadd);
         btnadd.setOnClickListener(this);
         return view;
 
@@ -37,10 +41,18 @@ public class SumFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
+        if (TextUtils.isEmpty(etfirst.getText())) {
+            etfirst.setError("Enter Something");;
+            return;
+        }
+        if (TextUtils.isEmpty(etsecond.getText())) {
+            etsecond.setError("Enter Something");;
+            return;
+        }
         int first= Integer.parseInt(etfirst.getText().toString());
         int second= Integer.parseInt(etsecond.getText().toString());
         int result=first+second;
-        Toast.makeText(getActivity(), "Sum of these numbers are"+result, Toast.LENGTH_SHORT).show();
+        tvadd.setText("Added Value is:"+result);
         
     }
 }
