@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.Switch;
 
 import com.example.secondassignment.fragments.AreaofCircle;
+import com.example.secondassignment.fragments.ReverseFragment;
 import com.example.secondassignment.fragments.SumFragment;
 
 public class MainActivity extends AppCompatActivity{
@@ -47,6 +48,17 @@ public class MainActivity extends AppCompatActivity{
                 FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
                 AreaofCircle areaofCircle=new AreaofCircle();
                 fragmentTransaction.replace(R.id.fragmentcontainer,areaofCircle);
+                fragmentTransaction.commit();
+            }
+        });
+
+        btnreversenumber.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager fragmentManager=getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+                ReverseFragment reverseFragment=new ReverseFragment();
+                fragmentTransaction.replace(R.id.fragmentcontainer,reverseFragment);
                 fragmentTransaction.commit();
             }
         });
