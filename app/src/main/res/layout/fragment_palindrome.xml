@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="400dp"
+    android:layout_height="500dp"
     android:orientation="vertical"
     tools:context=".fragments.PalindromeFragment">
 
@@ -42,7 +42,7 @@
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
         android:layout_marginTop="50dp"
-        android:textSize="40dp"
+        android:textSize="30dp"
         android:textAlignment="center"/>
 
 

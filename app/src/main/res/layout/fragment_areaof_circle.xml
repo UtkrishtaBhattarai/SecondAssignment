@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:layout_height="400dp"
+    android:layout_height="500dp"
     tools:context=".fragments.AreaofCircle">
 
     <TextView
@@ -39,7 +39,7 @@
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
         android:layout_marginTop="50dp"
-        android:textSize="40dp"
+        android:textSize="30dp"
         android:textAlignment="center"/>
 
 
